@@ -35,7 +35,7 @@ Create a `.env` file in the root directory and set the following environment var
 ```env
 PORT=5083
 DB_HOST=localhost  # Change to 'mysql-container' if using Docker
-DB_USER=root
+DB_USER=
 DB_PASSWORD=
 DB_NAME=grocery_db
 ```
@@ -100,7 +100,7 @@ POST /api/admin/grocery
 ### **1️⃣ Build and Run API in Docker**
 ```sh
 docker build -t grocery-api .
-docker run -p 5083:5083 --name grocery-api --env-file .env grocery-api
+docker run -p 5000:5000 --name grocery-api --env-file .env grocery-api
 ```
 
 ### **2️⃣ Check Running Containers**
